@@ -28,8 +28,8 @@ public class Main extends Application {
 
     private Stage stage;
     private User loggedUser;
-    private final double MINIMUM_WINDOW_WIDTH = 200;
-    private final double MINIMUM_WINDOW_HEIGHT = 150;
+    private final double MINIMUM_WINDOW_WIDTH = 289;
+    private final double MINIMUM_WINDOW_HEIGHT = 352;
 
     /**
      * @param args the command line arguments
@@ -46,9 +46,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         try {
             stage = primaryStage;
-            stage.setTitle("压测环境部署工具");
-            stage.setMinWidth(MINIMUM_WINDOW_WIDTH);
-            stage.setMinHeight(MINIMUM_WINDOW_HEIGHT);
+            stage.setTitle("阿里云压测部署工具");
             gotoLogin();
             primaryStage.show();
         } catch (Exception ex) {
@@ -104,7 +102,7 @@ public class Main extends Application {
         } finally {
             in.close();
         } 
-        Scene scene = new Scene(page, 800, 600);
+        Scene scene = new Scene(page);
         stage.setScene(scene);
         stage.sizeToScene();
         return (Initializable) loader.getController();

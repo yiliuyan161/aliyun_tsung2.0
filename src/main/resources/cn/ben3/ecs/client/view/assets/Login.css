@@ -1,6 +1,6 @@
 
 .background {
-    -fx-background-image: url("CoarseGrid.png");
+    /*-fx-background-image: url("CoarseGrid.png");*/
     -fx-background-repeat: repeat;
 	-fx-background-color:
         linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
@@ -20,8 +20,7 @@
 .label {
 	-fx-font-family: "Arial";
     -fx-font-size: 14;
-    -fx-text-fill: rgba(255, 255, 255, 0.4);
-    -fx-effect: dropshadow( one-pass-box , rgba(0, 0, 0, 0.6), 0, 0.0 , 0 , 1 );
+    -fx-text-fill: white;
 }
 
 .profileTitle {
@@ -63,6 +62,10 @@
     -fx-effect: dropshadow( one-pass-box , rgba(0, 0, 0, 0.8), 0, 0.0 , 0 , -1 );
 }
 
+.headText{
+ -fx-text-fill: white;
+    -fx-font-size: 26;
+}
 .button {
     -fx-background-color:
     	rgba(255, 255, 255, 0.08),
@@ -76,7 +79,7 @@
     -fx-background-insets: -3 -3 -4 -3, -3, 0, 1, 2, 0;
 	-fx-font-family: "Arial";
     -fx-text-fill: white;
-    -fx-font-size: 26;
+    -fx-font-size: 16;
     -fx-text-fill: linear-gradient(white, #d0d0d0);
     -fx-padding: 10 20 10 20;
 }

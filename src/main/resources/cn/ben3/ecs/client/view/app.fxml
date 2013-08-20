@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <BorderPane layoutX="0.0" layoutY="0.0" prefHeight="600.0" prefWidth="800.0">
+      <bottom>
+        <ScrollPane prefHeight="200.0" prefWidth="200.0">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+          </content>
+        </ScrollPane>
+      </bottom>
+      <center>
+        <VBox prefHeight="400.0" prefWidth="200.0">
+          <children>
+            <ListView prefHeight="400.0" prefWidth="260.0" />
+          </children>
+        </VBox>
+      </center>
+      <left>
+        <VBox prefHeight="400.0" prefWidth="219.0">
+          <children>
+            <HBox alignment="CENTER" fillHeight="true" focusTraversable="false" minHeight="32.0" minWidth="-Infinity" prefHeight="35.0" prefWidth="219.0" VBox.vgrow="ALWAYS">
+              <children>
+                <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-1.0" minWidth="-1.0" mnemonicParsing="false" prefHeight="-1.0" prefWidth="-1.0" text="全选" HBox.hgrow="ALWAYS">
+                  <HBox.margin>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+                  </HBox.margin>
+                </Button>
+                <Button cancelButton="false" contentDisplay="CENTER" defaultButton="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="41.0" prefWidth="101.0" text="反选" textAlignment="CENTER" HBox.margin="$x1" />
+              </children>
+              <padding>
+                <Insets />
+              </padding>
+            </HBox>
+            <ListView prefHeight="349.0" prefWidth="219.0" />
+          </children>
+        </VBox>
+      </left>
+      <right>
+        <VBox prefHeight="400.0" prefWidth="321.0">
+          <children>
+            <GridPane>
+              <children>
+                <Label prefHeight="24.0" prefWidth="98.0" text="应用" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+              </children>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="160.0" minWidth="10.0" prefWidth="101.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="220.0" minWidth="10.0" prefWidth="220.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+          </children>
+        </VBox>
+      </right>
+    </BorderPane>
+  </children>
+</AnchorPane>
