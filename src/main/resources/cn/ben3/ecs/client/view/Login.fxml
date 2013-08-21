@@ -8,15 +8,15 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="352.0" maxWidth="289.0" minHeight="352.0" minWidth="289.0" prefHeight="352.0" prefWidth="289.0" styleClass="background" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="cn.ben3.ecs.client.controller.LoginController">
+<AnchorPane id="AnchorPane" maxHeight="352.0" maxWidth="289.0" minHeight="352.0" minWidth="289.0" prefHeight="352.0" prefWidth="289.0" styleClass="background" xmlns:fx="http://javafx.com/fxml" fx:controller="cn.ben3.ecs.client.controller.LoginController">
   <children>
     <AnchorPane id="AnchorPane" layoutX="18.0" layoutY="25.0" maxHeight="313.0" maxWidth="248.0" minHeight="313.0" minWidth="248.0" prefHeight="313.0" prefWidth="248.0">
       <children>
         <Label layoutX="12.0" layoutY="12.0" prefHeight="38.0" prefWidth="246.0" styleClass="headText" text="阿里云压测部署工具" />
         <Label id="label1" layoutX="14.0" layoutY="67.0" prefWidth="134.0" text="ACCESS_KEY_ID" />
-        <TextField id="textField1" fx:id="userId" layoutY="86.0" prefWidth="300.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" />
+        <TextField id="textField1" fx:id="userId" layoutY="86.0" prefHeight="31.0" prefWidth="238.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" />
         <Label id="label1" layoutX="14.0" layoutY="139.0" text="ACCESS_KEY_SECRET" />
-        <PasswordField id="passwordField1" fx:id="password" layoutY="157.0" prefWidth="300.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" />
+        <PasswordField id="passwordField1" fx:id="password" layoutY="157.0" prefHeight="31.0" prefWidth="238.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" />
         <Label id="label2" fx:id="errorMessage" layoutX="10.0" layoutY="202.0" prefHeight="31.0" prefWidth="238.0" />
         <Button id="button1" fx:id="login" defaultButton="true" layoutX="16.0" layoutY="243.0" onAction="#processLogin" prefHeight="38.0" prefWidth="210.0" text="Login" />
       </children>
