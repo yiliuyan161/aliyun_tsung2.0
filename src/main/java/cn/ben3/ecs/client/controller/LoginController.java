@@ -70,7 +70,7 @@ public class LoginController extends AnchorPane implements Initializable {
         errorMessage.setText("");
         userId.setPromptText("demo");
         password.setPromptText("demo");
-        
+
     }
     
     

@@ -74,6 +74,6 @@
     </BorderPane>
   </children>
   <stylesheets>
-    <URL value="@assets/Login.css" />
+    <URL value="@assets/style.css" />
   </stylesheets>
 </AnchorPane>

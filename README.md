@@ -27,4 +27,21 @@ aliyun_tsung2.0
 
 ECS-api调用部分，稍微改写官方demo(官方demo的代码写的很优雅),使用https访问，比较有通用价值，就两个java文件（API.java,EcsRequest.java），可以直接拷贝出来用
 
+操作流程：
+
+批量修改密码
+  选择主机
+  输入密码
+初始化环境
+  选择主机
+  开始
+建立ssh控制网
+	选择主节点
+	选择从节点
+启动测试server
+	选择节点
+	选择本地数据接收目录
+	启动server/停止server/上传测试包/下载测试数据
+
+
 

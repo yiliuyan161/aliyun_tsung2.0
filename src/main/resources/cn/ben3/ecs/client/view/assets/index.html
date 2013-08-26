@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+    <link href="http://libs.baidu.com/bootstrap/2.0.4/css/bootstrap.css" rel="stylesheet">
+    <link href="css/w2ui-1.2.css" rel="stylesheet">
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+<div id="layout" style="width: 95%; height: 400px;margin:0 auto;border: 1px solid lightblue;"></div>
+
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+<script src="http://libs.baidu.com/bootstrap/2.0.4/js/bootstrap.js"></script>
+<script src="js/w2ui-1.2.js"></script>
+<script type="text/javascript">
+
+</script>
+<script type="text/javascript">
+    var pstyle = 'border: 1px solid #dfdfdf; padding: 5px;';
+    $('#layout').w2layout({
+        name: 'layout',
+        panels: [
+            { type: 'top', size: 50, style: pstyle, content: '<h1>第一步选择主机</h1>' },
+            { type: 'main', style: pstyle, content: 'main'
+             },
+            {type:'bottom',style:pstyle,toolbar: {
+                items: [
+
+                    { type: 'spacer' },
+                    { type: 'button',  id: 'item5',  caption: '下一步', img: 'icon-save', hint: 'Hint for item 5' }
+                ],
+                onClick: function (target, data) {
+                    this.owner.content('main', target);
+                }
+                }
+                ,size:30
+            }
+        ]
+    });
+    $('#grid').w2grid({
+        name: 'grid',
+        show: {
+//            header 		: true,
+//            toolbar 	: true,
+            footer		: true,
+            lineNumbers	: true,
+            selectColumn: true
+        },
+
+        searches: [
+            { field: 'fname', caption: 'First Name', type: 'text' },
+            { field: 'lname', caption: 'Last Name', type: 'text' },
+            { field: 'email', caption: 'Email', type: 'text' }
+        ],
+        sortData: [ { field: 'lname', direction: 'asc' } ],
+        columns: [
+            { field: 'recid', caption: 'ID', size: '50px', sortable: true },
+            { field: 'fname', caption: 'First Name', size: '30%', sortable: true },
+            { field: 'lname', caption: 'Last Name', size: '30%', sortable: true },
+            { field: 'email', caption: 'Email', size: '40%' },
+            { field: 'sdate', caption: 'Start Date', size: '120px' }
+        ],
+        records: [
+            { recid: 1, fname: 'John', lname: 'doe', email: 'jdoe@gmail.com', sdate: '4/3/2012' },
+            { recid: 2, fname: 'Stuart', lname: 'Motzart', email: 'jdoe@gmail.com', sdate: '4/3/2012' },
+            { recid: 3, fname: 'Jin', lname: 'Franson', email: 'jdoe@gmail.com', sdate: '4/3/2012' },
+            { recid: 4, fname: 'Susan', lname: 'Ottie', email: 'jdoe@gmail.com', sdate: '4/3/2012' },
+            { recid: 5, fname: 'Kelly', lname: 'Silver', email: 'jdoe@gmail.com', sdate: '4/3/2012' },
+            { recid: 6, fname: 'Francis', lname: 'Gatos', email: 'jdoe@gmail.com', sdate: '4/3/2012' },
+            { recid: 7, fname: 'Mark', lname: 'Welldo', email: 'jdoe@gmail.com', sdate: '4/3/2012' },
+            { recid: 8, fname: 'Thomas', lname: 'Bahh', email: 'jdoe@gmail.com', sdate: '4/3/2012' },
+            { recid: 9, fname: 'Sergei', lname: 'Rachmaninov', email: 'jdoe@gmail.com', sdate: '4/3/2012' },
+            { recid: 20, fname: 'Jill', lname: 'Doe', email: 'jdoe@gmail.com', sdate: '4/3/2012' },
+            { recid: 21, fname: 'Frank', lname: 'Motzart', email: 'jdoe@gmail.com', sdate: '4/3/2012' },
+            { recid: 22, fname: 'Peter', lname: 'Franson', email: 'jdoe@gmail.com', sdate: '4/3/2012' },
+            { recid: 23, fname: 'Andrew', lname: 'Ottie', email: 'jdoe@gmail.com', sdate: '4/3/2012' },
+            { recid: 24, fname: 'Manny', lname: 'Silver', email: 'jdoe@gmail.com', sdate: '4/3/2012' },
+            { recid: 25, fname: 'Ben', lname: 'Gatos', email: 'jdoe@gmail.com', sdate: '4/3/2012' },
+            { recid: 26, fname: 'Doer', lname: 'Welldo', email: 'jdoe@gmail.com', sdate: '4/3/2012' },
+            { recid: 27, fname: 'Shashi', lname: 'bahh', email: 'jdoe@gmail.com', sdate: '4/3/2012' },
+            { recid: 28, fname: 'Av', lname: 'Rachmaninov', email: 'jdoe@gmail.com', sdate: '4/3/2012' }
+        ]
+    });
+    w2ui['layout'].content('main', w2ui['grid']);
+</script>
+</body>
+</html>

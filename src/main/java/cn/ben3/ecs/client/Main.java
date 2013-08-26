@@ -10,11 +10,17 @@ import cn.ben3.ecs.client.logic.Context;
 import cn.ben3.ecs.client.model.User;
 import cn.ben3.ecs.client.security.Authenticator;
 import javafx.application.Application;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+import javafx.concurrent.Worker;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.StackPane;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 
 import java.io.InputStream;
@@ -74,12 +80,15 @@ public class Main extends Application {
     }
     
     private void gotoProfile() {
-        try {
-            ProfileController profile = (ProfileController) replaceSceneContent("Profile.fxml");
-            profile.setApp(this);
-        } catch (Exception ex) {
-            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        StackPane root = new StackPane();
+        final WebView view = new WebView();
+        WebEngine engine = view.getEngine();
+        engine.setJavaScriptEnabled(true);
+        engine.load("http://www.baidu.com");
+        root.getChildren().add(view);
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     private void gotoLogin() {
