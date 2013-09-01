@@ -24,6 +24,7 @@ import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 
 import java.io.InputStream;
+import java.net.URL;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -84,7 +85,8 @@ public class Main extends Application {
         final WebView view = new WebView();
         WebEngine engine = view.getEngine();
         engine.setJavaScriptEnabled(true);
-        engine.load("http://www.baidu.com");
+        URL localUrl = this.getClass().getResource("view/assets/index.html");
+        engine.load(String.valueOf(localUrl));
         root.getChildren().add(view);
         Scene scene = new Scene(root);
         stage.setScene(scene);
