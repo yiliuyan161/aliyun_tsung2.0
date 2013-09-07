@@ -22,7 +22,7 @@
       </children>
     </AnchorPane>
   </children>
-  <stylesheets>
-    <URL value="@assets/style.css" />
-  </stylesheets>
+  <!--<stylesheets>-->
+    <!--<URL value="@assets/style.css" />-->
+  <!--</stylesheets>-->
 </AnchorPane>

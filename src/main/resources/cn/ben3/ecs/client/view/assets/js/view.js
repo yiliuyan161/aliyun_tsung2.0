@@ -20,8 +20,8 @@ App.gridView = Ember.View.extend({
             this.rerender();
         },
         one: function(eve) {
-            console.log(eve);
-            this.rerender();
+
+
         }
     } ,
 

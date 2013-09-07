@@ -23,33 +23,139 @@
         </table>
     </script>
     <script type="text/x-handlebars" data-template-name="index">
-        <ul>
-            {{#each item in model}}
-            <li>{{item}}</li>
-            {{/each}}
-        </ul>
+       <h1>搭建步骤</h1>
+        <ol>
+            <li><h2>批量修改密码，保证密码一致</h2></li>
+            <li><h2>集群初始化tsung环境</h2></li>
+            <li><h2>配置SSH授信</h2></li>
+            <li><h2>启动server，运行测试，取回报告</h2></li>
+
+
+        </ol>
     </script>
     <script type="text/x-handlebars" data-template-name="password">
         <h1>批量修改密码</h1>
         {{view App.gridView}}
+        <form class="form-inline">
+            <fieldset>
+                <div class="control-group">
+                    <div class="controls">
+                        <input id="password" name="password" type="text" placeholder="密码" class="input-large">
+                        <button id="save" name="save" class="btn btn-primary">变更</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+
+        <div class="progress progress-striped">
+            <div class="bar" style="width: 20%;"></div>
+        </div>
     </script>
     <script type="text/x-handlebars" data-template-name="env">
-        <ul>
-
-        </ul>
+        <h1>初始化tsung环境</h1>
+        {{view App.gridView}}
+        <form class="form-inline">
+            <fieldset>
+                <div class="control-group">
+                    <div class="controls">
+                        <button id="save" name="start_init" class="btn btn-primary">开始</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <div class="progress progress-striped">
+            <div class="bar" style="width: 20%;"></div>
+        </div>
     </script>
     <script type="text/x-handlebars" data-template-name="ssh">
-        <ul>
-            {{#each item in model}}
-            <li>{{item}}</li>
-            {{/each}}
-        </ul>
+         <h1>分发ssh密钥</h1>
+         <ul>
+             <li>
+                 <h2>选择控制节点</h2>
+                 <select name="master">
+                     <option value="1">1</option>
+                     <option value="1">1</option>
+                     <option value="1">1</option>
+                     <option value="1">1</option>
+                     <option value="1">1</option>
+                 </select>
+             </li>
+             <li>
+                 <h2>选择从节点</h2>
+                 {{view App.gridView}}
+             </li>
+             <li>
+                 <form class="form-inline">
+                     <fieldset>
+                         <div class="control-group">
+                             <div class="controls">
+                                 <button id="start_ssh" name="start_ssh" class="btn btn-primary">开始</button>
+                             </div>
+                         </div>
+                     </fieldset>
+                 </form>
+             </li>
+         </ul>
+        <div class="progress progress-striped">
+            <div class="bar" style="width: 20%;"></div>
+        </div>
     </script>
     <script type="text/x-handlebars" data-template-name="server">
+        <h1>测试服务器控制</h1>
         <ul>
-            {{#each item in model}}
-            <li>{{item}}</li>
-            {{/each}}
+            <li>
+                <h2>推送server</h2>
+                {{view App.gridView}}
+                <form class="form-inline">
+                    <fieldset>
+                        <div class="control-group">
+                            <div class="controls">
+                                <button id="push_server" name="start_ssh" class="btn btn-primary">推送server</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+                <div class="progress progress-striped">
+                    <div class="bar" style="width: 20%;"></div>
+                </div>
+            </li>
+            <li>
+                <h2>启动/停止Server</h2>
+                <form class="form-inline">
+                    <fieldset>
+                        <div class="control-group">
+                            <div class="controls">
+                                <button id="start_server" name="start_server" class="btn btn-primary">启动server</button>
+                                <button id="stop_server" name="stop_server" class="btn btn-danger">停止server</button>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="controls">
+                                <p>server已经启动，访问地址：</p>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </li>
+            <li>
+                <h2>测试数据取回</h2>
+                 <table class="table table-striped">
+                     <thead>
+                     <th>名称</th>
+                     <th>时间</th>
+                     <th>取回全部</th>
+                     <th>取回报告</th>
+                     </thead>
+                     <tbody>
+                     <tr>
+                         <td>1</td>
+                         <td>1</td>
+                         <td><button class="btn-primary">取回全部数据</button></td>
+                         <td><button  class="btn-primary">取回报告</button></td>
+                     </tr>
+                     </tbody>
+                 </table>
+            </li>
         </ul>
     </script>
 
