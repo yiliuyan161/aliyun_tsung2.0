@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+</head>
+<body>
+<div data-bind="page: {id: 'start'}">
+    <ul class="nav nav-tabs">
+        <li class="active">
+            <a data-bind="page-href: 'fry'">Fry</a>
+        </li>
+        <li class="active">
+            <a data-bind="page-href: 'interesting'">Interesting</a>
+        </li>
+    </ul>
+
+    <div data-bind="page: {id: 'fry'}">
+
+    </div>
+    <div data-bind="page: {id: 'interesting'}">
+        <a data-bind="page-href: '../../'">Close this tab</a>
+        <br/>
+
+    </div>
+</div>
+<script src="js/lib/jquery-1.9.1.js"></script>
+<script src="js/lib/bootstrap.js"></script>
+<script src="js/lib/knockout-2.3.0.js"></script>
+<script src="js/lib/pager.js"></script>
+<script type="text/javascript">
+    var viewModel = {
+    };
+    // extend viewModel with a $__page__ that points to pager.page that points to a new Page
+    pager.extendWithPage(viewModel);
+    // apply your bindings
+    ko.applyBindings(viewModel);
+    // run this method - listening to hashchange
+    pager.start();
+</script>
+</body>
+</html>
