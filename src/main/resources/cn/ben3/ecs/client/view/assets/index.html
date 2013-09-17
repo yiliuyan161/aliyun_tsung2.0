@@ -37,8 +37,18 @@
                 </div>
                 <div data-bind="visible:show" id="pass">
                     <h1>批量修改密码</h1>
-
-                    <form class="form-inline">
+                     <table>
+                         <thead>
+                         <tr>
+                             <th><input type="checkbox" data-bind="checked"></th>
+                             <th>主机名</th>
+                             <th>主机id</th>
+                             <th>内网IP</th>
+                             <th>外网IP</th>
+                         </tr>
+                         </thead>
+                     </table>
+                    <form class="form-inline" method="post">
                         <fieldset>
                             <div class="control-group">
                                 <div class="controls">
